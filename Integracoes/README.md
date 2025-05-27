@@ -8,7 +8,7 @@ Cada diretório contém as soluções de tecnologia que já possuem script's de 
 
 # 🛡️ Scripts publicados
 
-| Arquivo | Tecnologia | Solução | Descrição | 
-|---------|------------|---------|-----------|
-| `custom-misp-ip.py`| SIEM | Wazuh | Bloqueio de IP Atacante||
-| `tpot_to_misp.py` | Honeypot | Tpot | Compartilhamento dos Atacantes ||
+| Arquivo | Tecnologia | Solução | Descrição | Autor |
+|---------|------------|---------|-----------|-------|
+| `custom-misp-ip.py`| SIEM | Wazuh | Bloqueio de IP Atacante| Rafael Pontes |
+| `tpot_to_misp.py` | Honeypot | Tpot | Compartilhamento dos Atacantes | Bruno Odon|
