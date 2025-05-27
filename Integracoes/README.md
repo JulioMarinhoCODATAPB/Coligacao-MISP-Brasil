@@ -11,3 +11,4 @@ Cada diretório contém as soluções de tecnologia que já possuem script's de 
 | Arquivo | Tecnologia | Solução | Descrição | 
 |---------|------------|---------|-----------|
 | `custom-misp-ip.py`| SIEM | Wazuh | Bloqueio de IP Atacante||
+| `tpot_to_misp.py` | Honeypot | Tpot | Registro dos atacantes ||
