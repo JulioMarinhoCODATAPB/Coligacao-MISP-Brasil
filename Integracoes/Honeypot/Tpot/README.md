@@ -81,10 +81,13 @@ Em caso de dúvidas, contribuições ou melhorias, abra uma issue ou envie um pu
 
 Para adicionar um novo script a este repositório, siga o modelo acima: comece com um título indicando o nome do script e descreva seu funcionamento, arquivos envolvidos, dependências e configurações necessárias.
 
+
+
 # 🛡️ Script (custom-tpot-misp.py): Integração de Honeypot Tpot com MISP
 Este script é um fork do script tpot_to_misp.py, cria evento no MISP já com tags da taxonomia ENISA e TLP além de portas e geolocalização de cada atributo, exceto na porta 80 (HTTP):
 
 🔍 Coletar automaticamente IPs maliciosos registrados no Elasticsearch do T-Pot
+
 🧠 Enriquecer os indicadores com informações de país e porta alvo, exceto na porta 80 (HTTP)
 
 ## 🔐 Configuração
@@ -101,3 +104,20 @@ MISP_KEY = "<API_KEY_MISP>"
 HONEYPOT_IP = "<IP_HONEYPOT_SERVER>"
 ES_HOST = "<IP_E_PORTA_ELASTICSEARCH>"
 ```
+
+## 📦 Dependências
+- Python 3
+- Módulos:
+  - pymisp
+  - elasticsearch
+  - datetime
+  - logging
+  - datetime
+  - urllib3
+ 
+  - 
+  
+## 📧 Contato
+Em caso de dúvidas, contribuições ou melhorias, abra uma issue ou envie um pull request.
+
+Para adicionar um novo script a este repositório, siga o modelo acima: comece com um título indicando o nome do script e descreva seu funcionamento, arquivos envolvidos, dependências e configurações necessárias
