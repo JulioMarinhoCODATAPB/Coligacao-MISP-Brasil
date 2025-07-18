@@ -114,8 +114,7 @@ ES_HOST = "<IP_E_PORTA_ELASTICSEARCH>"
   - logging
   - datetime
   - urllib3
- 
-  - 
+  
   
 ## 📧 Contato
 Em caso de dúvidas, contribuições ou melhorias, abra uma issue ou envie um pull request.
