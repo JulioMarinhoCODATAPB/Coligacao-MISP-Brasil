@@ -136,4 +136,4 @@ while True:
 
         except Exception as e:
             logger.error(f"[ERRO] Falha ao adicionar IP {src_ip}: {e}")
-root@sesegmisphml:/opt/integrations#
+root@<yourserverhostname>:/opt/integrations#
