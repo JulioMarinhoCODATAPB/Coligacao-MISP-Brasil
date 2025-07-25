@@ -83,7 +83,7 @@ def run_daily_import():
 
     # --- 2. CRIA UM EVENTO NO MISP ---
     try:
-        date_str = (datetime.datetime.now() - datetime.timedelta(days=1)).strftime('%d-%m-%y')
+        date_str = datetime.datetime.now().strftime('%d-%m-%y')
         event = MISPEvent(); event.info = f"Hashes de Payload Malware no Honeypot - {date_str}"
         event.distribution = 0; event.threat_level_id = 2; event.analysis = 2
         event.add_tag("tlp:amber+strict"); event.add_tag("Honeypot"); event.add_tag('enisa:nefarious-activity-abuse="worms-trojans"') # Tags do evento
