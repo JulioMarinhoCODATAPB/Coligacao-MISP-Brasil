@@ -2,7 +2,7 @@
 # 📘 Árvore de Tecnologias
 
 Esta árvore organiza os diferentes scripts utilizados para integração com o MISP.  
-Cada diretório contém as soluções de tecnologia que já possuem script's de integração com o MISP, incluindo objetivo, funcionamento e instruções de uso.
+Cada diretório listado abaixo contém scripts de integração entre soluções de cibersegurança e o MISP. Em cada um deles, são apresentados o objetivo da integração, seu funcionamento e as instruções de uso.
 
 ---
 
