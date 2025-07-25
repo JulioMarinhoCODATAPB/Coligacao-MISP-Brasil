@@ -86,9 +86,9 @@ Para adicionar um novo script a este repositório, siga o modelo acima: comece c
 # 🛡️ Script (custom-tpot-misp.py): Integração de Honeypot Tpot com MISP
 Este script é um fork do script tpot_to_misp.py, cria evento no MISP já com tags da taxonomia ENISA e TLP além de portas e geolocalização de cada atributo, exceto na porta 80 (HTTP):
 
-🔍 Coletar automaticamente IPs maliciosos registrados no Elasticsearch do T-Pot
+🔍 Coleta automaticamente IPs maliciosos registrados no Elasticsearch do T-Pot
 
-🧠 Enriquecer os indicadores com informações de país e porta alvo, exceto na porta 80 (HTTP)
+🧠 Enriquece os indicadores com informações de país e porta alvo, exceto na porta 80 (HTTP)
 
 ## 🔐 Configuração
 Antes de usar, edite as seguintes variáveis no início do script:
@@ -114,7 +114,38 @@ ES_HOST = "<IP_E_PORTA_ELASTICSEARCH>"
   - logging
   - datetime
   - urllib3
-  
+
+# 🛡️ Script (tpot-misp-hash.py): Integração de Honeypot Tpot com MISP com foco em hashes 
+Este script extrai hashes de payloads maliciosos que atacantes utilizaram no pot Cowrie, o script cria evento no MISP com os hashes e os IPs associados com esse respectivo hash, o evento já é criado com tags da taxonomia ENISA e TLP além de portas e geolocalização de cada atributo. Diferente dos outros scripts, este não captura em tempo real mas durante um periodo de tempo a ser ajustado no script (por padrão, 24 horas).
+
+🔍 Coleta hashes de payloads maliciosos e os IPs associados registrados
+🧠 Enriquece os indicadores com informações de país e porta alvo
+
+## 🔐 Configuração
+Antes de usar, edite as seguintes variáveis no início do script:
+
+- URL do MISP:
+```python
+MISP_URL = "<URL_MISP_SERVER>"
+MISP_KEY = "<API_KEY_MISP>"
+```
+
+- IP do Elasticsearch:
+```python
+ES_HOST = "<IP_E_PORTA_ELASTICSEARCH>"
+```
+
+## 📦 Dependências
+- Python 3
+- Módulos:
+  - pymisp
+  - elasticsearch
+  - datetime
+  - logging
+  - datetime
+  - collections
+  - os
+  - urllib3
   
 ## 📧 Contato
 Em caso de dúvidas, contribuições ou melhorias, abra uma issue ou envie um pull request.
