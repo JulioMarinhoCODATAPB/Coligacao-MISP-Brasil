@@ -95,6 +95,61 @@ Antes de usar, edite as seguintes partes no script:
 
 ---
 
+# 🛡️ Script (custom-misp-hash.py): Alerta de Hash Malicioso
+
+Este script implementa uma **integração entre o Wazuh** e o **MISP** para:
+
+- 🔍 Verificar automaticamente se um hash de origem de um alerta gerado pelo Wazuh está listado no MISP
+- 🔍 Verificar se o hash é um falso positivo ao consultar as warning lists do MISP
+- 🧠 Enviar metadados da ameaça como alerta enriquecido para o Wazuh
+
+---
+
+## ⚙️ Funcionamento
+
+### 📥 Entrada
+O script é executado automaticamente pelo Wazuh quando um alerta é gerado (`sys.argv[1]` aponta para o arquivo JSON do alerta).
+
+### 🔁 Processo
+
+1. Lê o alerta gerado pelo Wazuh (JSON)
+2. Verifica se o hash existe em algum evento na instância do MISP
+3. Verifica se o hash é um falso positivo consultando as warning lists
+4. Se houver correspondência na warning list o alerta é ignorado
+5. Se não houver correspondência na warning list um novo alerta é gerado no Wazuh
+
+---
+
+## 📂 Estrutura e arquivos importantes
+
+| Arquivo         | Função                                                     |
+|------------------|-----------------------------------------------------------|
+| `custom-misp-hash.py`  | Script principal da integração                      |
+| `misp_hash.log`        | Log de atividades do script (alertas, erros, etc.)  |
+
+---
+
+## 🔐 Configuração
+
+Antes de usar, edite as seguintes partes no script:
+
+1. **URL da API do MISP**
+   ```python
+   MISP_URL = "https://SEUENDERECOMISP/"
+   ```
+
+2. **API Key do MISP**
+   ```python
+   MISP_API_KEY = "SUA_API_KEY"
+   ```
+
+3. **Faixas de IPs permitidos (allowlist)**
+   ```python
+   ipaddress.IPv4Network("192.168.0.0/16")
+   ```
+
+---
+
 ## 📧 Contato
 
 Em caso de dúvidas, contribuições ou melhorias, abra uma **issue** ou envie um **pull request**.
