@@ -34,8 +34,8 @@ O script deve ser executado na máquina onde o Pi-hole está instalado. O script
 
 ## 🔐 Configuração
 
-Crie um arquivo chamado 'domain_warninglists.txt' e dentro dele coloque as warning lists que deverão ser usadas para filtragem
-Exemplo:
+Crie um arquivo chamado 'domain_warninglists.txt' e dentro dele coloque as warning lists que deverão ser usadas para filtragem:
+
  ```python
 https://SEU-SERVER-MISP/warninglists/view/6
 
@@ -44,8 +44,8 @@ https://SEU-SERVER-MISP/warninglists/view/17
 https://SEU-SERVER-MISP/warninglists/view/20
  ```
 
-No Pi-hole, na opção Lists, adicione o diretório em que o arquivo 'domain_blocklist.txt' se encontra
-Exemplo:
+No Pi-hole, na opção Lists, adicione o diretório em que o arquivo 'domain_blocklist.txt' se encontra:
+
 ```python
 file:///opt/integrations/domain_blocklist.txt
  ```
