@@ -12,14 +12,14 @@ Este script implementa uma **integração entre o Pi-hole** e o **MISP** para:
 
 - 🔍 Verificar atributos do tipo dominio no MISP nos últimos 6 meses
 - 🧠 Filtrar esses dominios com as warning lists para evitar falsos positivos, em seguida executar um ping para verificar se o domínio está ativo
-- 🚫 Adicionar o domínio a uma **blocklist local** para depois ser configurada no Pi-hole para bloqueio
+- 🚫 Adicionar os domínios a uma **blocklist local** e roda um comando para o Pi-hole atualizar e ler o conteúdo da lista
 
 ---
 
 ## ⚙️ Funcionamento
 
 ### 📥 Entrada
-O script pode executado manualmente ou programado pra execução automatica com o Cron.
+O script deve ser executado na máquina onde o Pi-hole está instalado. O script pode ser executado manualmente ou programado pra execução automatica com o Cron.
 
 
 ## 📂 Estrutura e arquivos importantes
