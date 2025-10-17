@@ -15,3 +15,4 @@ Cada diretório listado abaixo contém scripts de integração entre soluções 
 | `custom-tpot-misp` | Honeypot | Tpot | Fork do `tpot_to_misp.py` adicionando tags da taxonomia ENISA e TLP além de portas e geolocalização de cada atributo | Rafael Pontes |
 | `tpot-misp-hash.py` | Honeypot | Tpot | Extrai hashes de payloads maliciosos que atacantes utilizaram | Rafael Pontes |
 | `custom-misp-hash.py`| SIEM | Wazuh | Consulta e classifica se Hash estiver listado no MISP | Rafael Pontes |
+| `misp_pihole.py`| DNS Filter | Pi-Hole | Bloqueio de DNS Malicioso | Rafael Pontes |
