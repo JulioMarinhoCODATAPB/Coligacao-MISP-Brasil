@@ -44,6 +44,12 @@ https://SEU-SERVER-MISP/warninglists/view/17
 https://SEU-SERVER-MISP/warninglists/view/20
  ```
 
+No Pi-hole, na opção Lists, adicione o caminho em que o arquivo 'domain_blocklist.txt' se encontra
+Exemplo:
+```python
+file:///opt/integrations/domain_blocklist.txt
+ ```
+
 Antes de usar, edite as seguintes partes no script:
 
 1. **URL da API do MISP**
