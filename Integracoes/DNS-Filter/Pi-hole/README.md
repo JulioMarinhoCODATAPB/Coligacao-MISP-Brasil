@@ -44,7 +44,7 @@ https://SEU-SERVER-MISP/warninglists/view/17
 https://SEU-SERVER-MISP/warninglists/view/20
  ```
 
-No Pi-hole, na opção Lists, adicione o caminho em que o arquivo 'domain_blocklist.txt' se encontra
+No Pi-hole, na opção Lists, adicione o diretório em que o arquivo 'domain_blocklist.txt' se encontra
 Exemplo:
 ```python
 file:///opt/integrations/domain_blocklist.txt
