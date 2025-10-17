@@ -25,9 +25,9 @@ MISP_KEY = 'SUA-API-KEY-MISP'
 MISP_VERIFYCERT = True
 
 # --- Configuração dos Arquivos Locais ---
-BLOCKLIST_FILE_PATH = '/var/ossec/integrations/domain_blocklist.txt'
+BLOCKLIST_FILE_PATH = '/opt/integrations/domain_blocklist.txt'
 # Arquivo que conterá as URLs das warning lists a serem usadas.
-WARNINGLIST_FILE_PATH = '/var/ossec/integrations/domain_warninglists.txt'
+WARNINGLIST_FILE_PATH = '/opt/integrations/domain_warninglists.txt'
 
 # --- Configuração de Logging ---
 logging.basicConfig(
@@ -244,4 +244,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
