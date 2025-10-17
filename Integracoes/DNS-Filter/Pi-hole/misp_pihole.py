@@ -117,9 +117,10 @@ def check_warning_lists(misp_client, domains):
     """
     try:
         logging.info(f"Verificando domínios contra as warning lists de {WARNINGLIST_FILE_PATH}...")
-        if not os.path.exists(WARNINGLIST_FILE_PATH):
-            logging.warning("Arquivo de warning lists não encontrado.")
-            return domains
+        if not os.path.exists(WARNINGLIST_FILE_PATH):            
+            logging.error(f"ERRO CRÍTICO: Arquivo de warning lists não encontrado em '{WARNINGLIST_FILE_PATH}'.")
+            logging.error("A execução foi interrompida para evitar o bloqueio de falsos positivos.")
+            sys.exit(1) # Encerra o script com um código de erro.
 
         false_positives = set()
         with open(WARNINGLIST_FILE_PATH, 'r') as f:
@@ -241,4 +242,5 @@ def main():
     logging.info("Script concluído.")
 
 if __name__ == "__main__":
+
     main()
